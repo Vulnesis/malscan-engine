@@ -18,7 +18,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/vulnetix/malscan-engine/badnet"
+	"github.com/vulnesis/malscan-engine/badnet"
 )
 
 var dataFiles = []string{"bad-ipv4.txt", "bad-ipv6.txt", "bad-domains.txt", "bad-emails.txt"}

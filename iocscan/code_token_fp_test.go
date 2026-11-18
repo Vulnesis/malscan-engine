@@ -3,7 +3,7 @@ package iocscan
 import (
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // npm packages were minted as malware because `payload.info` is also a domain (.info is a TLD) and

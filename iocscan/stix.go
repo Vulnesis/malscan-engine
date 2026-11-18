@@ -1,6 +1,6 @@
 // Package iocscan adds a network-and-filesystem detection capability to the
 // malscan-engine: it pulls domain / IP / URL indicators-of-compromise from
-// Vulnetix's public STIX 2.1 feeds, then scans a working directory (and,
+// Vulnesis's public STIX 2.1 feeds, then scans a working directory (and,
 // optionally, ELF binaries within it) for any file that references a known-bad
 // indicator, returning evidence with full context (host, filesystem path, and
 // the file content around the hit).
@@ -25,7 +25,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/vulnetix/malscan-engine/allow"
+	"github.com/vulnesis/malscan-engine/allow"
 )
 
 // IndicatorType is the kind of observable a STIX indicator describes. Only the
@@ -212,7 +212,7 @@ func NewIndicatorSet() *IndicatorSet {
 // Add inserts one indicator, keyed by its lowercased value. A duplicate value of
 // the same kind keeps the first occurrence (feeds may repeat across ecosystems), except that
 // an externally-sourced copy replaces one whose only provenance is our own registry
-// (selfSourcedLabel): otherwise loading the Vulnetix index before the badnet blocklists left a
+// (selfSourcedLabel): otherwise loading the Vulnesis index before the badnet blocklists left a
 // third-party C2 entry tagged self-sourced, and indicatorClassFloor demoted every hit on it.
 //
 // Benign indicators (reserved/placeholder IPs, package-registry/CDN/standards/docs

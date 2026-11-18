@@ -16,7 +16,7 @@ type Parsed struct {
 
 // ParseFeed parses one feed body in a named format: iplist, netset, hosts,
 // rss, emails, mixed or misp, the parser keys of data/feeds.json. It lets a
-// caller that fetches a feed itself (the Vulnetix site, serving indicators to
+// caller that fetches a feed itself (the Vulnesis site, serving indicators to
 // runtime sensors) read it exactly as the malscan definitions do.
 func ParseFeed(formatName, body string) (Parsed, error) {
 	f, ok := parseFormat(formatName)

@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="pix-contemplative.svg" alt="Pix in analyst mode, the Vulnetix mascot" width="120">
+  <img src="pix-contemplative.svg" alt="Pix in analyst mode, the Vulnesis mascot" width="120">
 </p>
 
 # malscan-engine
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Vulnetix/malscan-engine)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Vulnesis/malscan-engine)
 
-Shared Go module for Vulnetix malicious-package detection. Consumed by both the
+Shared Go module for Vulnesis malicious-package detection. Consumed by both the
 VDB processors (`vdb-manager`) and the `package-firewall`.
 
 ## Packages
@@ -236,7 +236,7 @@ that is the value of a version field (`Version="1.0.0.39"`, `'version' => '1.33.
 
 ### Feed cache (temp dir, timestamped, TTL)
 
-The index (`https://vulnetix.com/malscan-stix/index.json`) and each per-ecosystem
+The index (`https://vulnes.is/malscan-stix/index.json`) and each per-ecosystem
 `dns`/`urls` bundle are cached under `os.TempDir()` as
 `malscan-stix-<ecosystem>-<kind>-<unixNano>.json`. Freshness is decided from the
 **timestamp encoded in the filename** (located via glob — no sidecar metadata):

@@ -16,7 +16,7 @@ import (
 
 // DefaultIndexURL is the public, unauthenticated STIX feed index. It lists, per
 // ecosystem, the `dns` and `urls` STIX 2.1 bundle URLs plus their sha256.
-const DefaultIndexURL = "https://vulnetix.com/malscan-stix/index.json"
+const DefaultIndexURL = "https://vulnes.is/malscan-stix/index.json"
 
 // DefaultTTL is how long a cached feed copy is considered fresh.
 const DefaultTTL = time.Hour
@@ -31,7 +31,7 @@ const defaultUserAgent = "malscan-engine"
 
 // DefaultTweetFeedURL is the TweetFeed (0xDanielLopez) rolling 30-day STIX 2.1
 // bundle — a base IOC feed (domain/url/ipv4 indicators + file hashes) merged
-// into every load alongside the vulnetix.com index. It has no published checksum
+// into every load alongside the vulnes.is index. It has no published checksum
 // (a moving file), so it is fetched without sha verification.
 const DefaultTweetFeedURL = "https://raw.githubusercontent.com/0xDanielLopez/TweetFeed/master/stix/month.json"
 
@@ -83,18 +83,18 @@ type FeedLoader struct {
 	TweetFeedTimeout time.Duration
 	DisableTweetFeed bool
 
-	// DisableVulnetixIndex skips the vulnetix STIX index (DefaultIndexURL) and its
+	// DisableVulnesisIndex skips the vulnesis STIX index (DefaultIndexURL) and its
 	// per-ecosystem feeds, while still loading the embedded badnet set and
 	// TweetFeed.
 	//
 	// This exists for the project that PUBLISHES that index. vdb-manager generates
-	// https://vulnetix.com/malscan-stix/ from its own MalwareHost/MalwareIoc rows;
+	// https://vulnes.is/malscan-stix/ from its own MalwareHost/MalwareIoc rows;
 	// if its processors then read the same index back through this loader, an
 	// indicator it published becomes "third-party known-bad" evidence for its own
 	// next scan, and a single false positive is self-confirming. For any OTHER
 	// consumer the index genuinely is third-party, which is why it stays the
 	// default and this is opt-out rather than opt-in.
-	DisableVulnetixIndex bool
+	DisableVulnesisIndex bool
 
 	// now is a test seam for the clock; nil means time.Now. It governs both the
 	// timestamp encoded into a new cache filename and the freshness comparison.
@@ -183,7 +183,7 @@ func (l *FeedLoader) Load(ecosystems ...string) (*IndicatorSet, []Warning, error
 	return l.load(false, false, ecosystems...)
 }
 
-// Refresh force-fetches every feed (the vulnetix index + its per-ecosystem feeds
+// Refresh force-fetches every feed (the vulnesis index + its per-ecosystem feeds
 // + the TweetFeed base) from remote, bypassing cache TTLs and rewriting the
 // on-disk cache, so subsequent TTL-cached Load/Scan calls read the fresh data.
 // With no ecosystems it refreshes every feed listed in the index; otherwise just
@@ -203,7 +203,7 @@ func (l *FeedLoader) load(forceFresh, wantAll bool, ecosystems ...string) (*Indi
 	var warnings []Warning
 
 	var idx Index
-	if !l.DisableVulnetixIndex {
+	if !l.DisableVulnesisIndex {
 		idxData, w, err := l.acquire("index", l.indexURL(), "", l.ttl(), l.httpClient(), forceFresh)
 		if err != nil {
 			return nil, warnings, fmt.Errorf("load stix index: %w", err)

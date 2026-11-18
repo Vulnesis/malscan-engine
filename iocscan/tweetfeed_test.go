@@ -73,7 +73,7 @@ func TestLoadMergesTweetFeedBase(t *testing.T) {
 		t.Fatalf("Load: %v (warns %+v)", err, warns)
 	}
 	if set.LookupDomain("evil-malware.io") == nil {
-		t.Fatal("missing vulnetix generic indicator")
+		t.Fatal("missing vulnesis generic indicator")
 	}
 	if set.LookupDomain(twDomain) == nil {
 		t.Fatal("TweetFeed base domain not merged into the set")

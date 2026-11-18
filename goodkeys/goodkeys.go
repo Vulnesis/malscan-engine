@@ -21,7 +21,7 @@
 // It is also augmentable at runtime via AddKey/AddEmail (e.g. from a curated
 // allowlist table) so new platform keys can be added without a code change.
 //
-// Dependency-free (stdlib only) so it can be lifted into the shared Vulnetix
+// Dependency-free (stdlib only) so it can be lifted into the shared Vulnesis
 // detection module and consumed by both the VDB processors and the
 // package-firewall.
 package goodkeys

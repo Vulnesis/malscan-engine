@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // Regression tests from the 2026-10-26 GCVE malware audit. IOC-STIX-MATCH was the largest
@@ -238,7 +238,7 @@ func TestAuditSharedHostURLAndTenantHostsStillMatch(t *testing.T) {
 	}
 }
 
-// Loading the Vulnetix index first must not hide a badnet entry for the same address: the
+// Loading the Vulnesis index first must not hide a badnet entry for the same address: the
 // externally-sourced copy wins, so a hit keeps full weight.
 func TestExternalIndicatorReplacesSelfSourcedDuplicate(t *testing.T) {
 	s := NewIndicatorSet()

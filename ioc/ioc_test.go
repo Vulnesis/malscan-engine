@@ -3,7 +3,7 @@ package ioc
 import (
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 func TestDeclaredHashes(t *testing.T) {

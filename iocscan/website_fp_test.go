@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // These regressions pin the false positives surfaced by the website repo's

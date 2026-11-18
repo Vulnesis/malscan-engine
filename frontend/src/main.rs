@@ -1,4 +1,4 @@
-//! Native configuration frontend for the Vulnetix `malscan-engine`.
+//! Native configuration frontend for the Vulnesis `malscan-engine`.
 //!
 //! The engine itself (the sibling Go module) is ecosystem-agnostic: every
 //! registry processor maps its package into a `PackageContext` and the same

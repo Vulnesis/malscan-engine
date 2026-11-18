@@ -1,6 +1,6 @@
 # known-bad threat-actor email addresses
 # GENERATED from public threat-intel feeds (badnet). Do not edit by hand.
-# Rebuild: `just gen-blocklists-force` (release) or `vulnetix malscan --fetch-definitions` (runtime).
+# Rebuild: `just gen-blocklists-force` (release) or `vulnesis malscan --fetch-definitions` (runtime).
 # sources: alienvault-data, alienvault-generic, aper-phishing-reply, binarydefense-banlist, bruteforceblocker, cinsscore-badguys, crowdsec-intelligence, dandelionsprout-antimalware, dshield-block, dshield-ipsascii, feodotracker-recommended, firehol-level3, isc-cloudips, isc-intelfeed, projecthoneypot-p-rss, projecthoneypot-rss, urlhaus-hosts
 # count: 53059
 0000.anthony523@att.net

@@ -6,6 +6,9 @@
 /genblocklist
 
 # Vulnetix CLI local state / scan output
+# Vulnesis CLI local state / scan output
 .vulnetix/
+.vulnesis/
 !.vulnetix/workflow.yaml
+!.vulnesis/workflow.yaml
 !.vulnetix/workflow.yaml

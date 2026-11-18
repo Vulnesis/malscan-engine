@@ -2,7 +2,7 @@
 // from Sohimaster/traur (https://github.com/Sohimaster/traur, MIT licensed).
 //
 // Unlike traur, this port does NOT compute a weighted trust score or tier.
-// Per Vulnetix policy, the engine only adopts traur's *factual* evaluations:
+// Per Vulnesis policy, the engine only adopts traur's *factual* evaluations:
 // every detector emits Findings, and any single Finding whose Class is
 // ClassEvidence is sufficient to mark a package malicious. Reputation-only
 // signals (votes, popularity, stars, missing license, package age) are emitted

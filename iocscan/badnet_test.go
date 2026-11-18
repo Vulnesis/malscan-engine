@@ -3,7 +3,7 @@ package iocscan
 import (
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/badnet"
+	"github.com/vulnesis/malscan-engine/badnet"
 )
 
 func TestAddBadnetSet(t *testing.T) {

@@ -2,7 +2,7 @@
 name = "malscan-frontend"
 version = "0.1.0"
 edition = "2021"
-description = "Native (egui) configuration frontend for the Vulnetix malscan-engine"
+description = "Native (egui) configuration frontend for the Vulnesis malscan-engine"
 license = "MIT"
 publish = false
 

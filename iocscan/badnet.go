@@ -3,7 +3,7 @@ package iocscan
 import (
 	"net"
 
-	"github.com/vulnetix/malscan-engine/badnet"
+	"github.com/vulnesis/malscan-engine/badnet"
 )
 
 // badnetIndicatorName / Description label the synthesised indicators so evidence

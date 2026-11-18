@@ -29,7 +29,7 @@ type tind struct {
 func makeBundle(inds ...tind) string {
 	objs := []map[string]any{
 		{"type": "marking-definition", "id": "marking-definition--m", "definition_type": "statement"},
-		{"type": "identity", "id": "identity--i", "name": "Vulnetix", "identity_class": "organization"},
+		{"type": "identity", "id": "identity--i", "name": "Vulnesis", "identity_class": "organization"},
 	}
 	for i, ind := range inds {
 		obj := map[string]any{
@@ -42,7 +42,7 @@ func makeBundle(inds ...tind) string {
 			"labels":       ind.labels,
 			"valid_from":   "2026-04-17T07:52:09Z",
 			"external_references": []map[string]any{
-				{"source_name": "vulnetix", "external_id": ind.extID},
+				{"source_name": "vulnesis", "external_id": ind.extID},
 			},
 		}
 		objs = append(objs, obj)

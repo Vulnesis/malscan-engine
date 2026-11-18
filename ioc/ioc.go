@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/vulnetix/malscan-engine/allow"
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/allow"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // IOC is an indicator of compromise extracted from a malicious package. Type

@@ -5,7 +5,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // HostInfo captures the host the scan ran on, so evidence is self-describing

@@ -3,7 +3,7 @@ package allow
 import "testing"
 
 // These three were published at severity critical into the PUBLIC malscan-stix
-// STIX feed, so a false positive here is visible outside Vulnetix. Confirmed in
+// STIX feed, so a false positive here is visible outside Vulnesis. Confirmed in
 // both the database and the published feed before this fix.
 func TestPublicFeedFalsePositivesAreBenign(t *testing.T) {
 	// "@click.group" is Click's command decorator, not a hostname.

@@ -4,7 +4,7 @@
 // stored in the shared database as MalwareIoc file-hash rows.
 //
 // This package is deliberately dependency-free (stdlib only) so it can be lifted
-// into the shared Vulnetix detection module and consumed by both the VDB
+// into the shared Vulnesis detection module and consumed by both the VDB
 // processors and the package-firewall.
 package badhash
 

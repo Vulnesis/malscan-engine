@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vulnetix/malscan-engine/badnet"
+	"github.com/vulnesis/malscan-engine/badnet"
 )
 
 // Defaults for a Scan.
@@ -23,7 +23,7 @@ const (
 // defaultSkipDirs are directory names pruned from the walk by default. A caller
 // can override the whole set via Options.SkipDirs (a non-nil empty slice scans
 // everything).
-var defaultSkipDirs = []string{".git", ".hg", ".svn", "node_modules", "vendor", ".vulnetix"}
+var defaultSkipDirs = []string{".git", ".hg", ".svn", "node_modules", "vendor", ".vulnesis"}
 
 // Options configure a Scan. The zero value (with a Root) is valid: feeds load
 // from the public index into the OS temp cache and every file under Root is

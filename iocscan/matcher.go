@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/vulnetix/malscan-engine/allow"
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/allow"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // Matcher matches text or binary content against a preloaded IndicatorSet,
@@ -530,11 +530,11 @@ const selfSourcedLabel = "source:registry"
 
 // indicatorClassFloor demotes a hit to ClassContext when the indicator is a BARE
 // host or address whose only provenance is our own registry — i.e. it exists in
-// the feed because a Vulnetix malware record already referenced it.
+// the feed because a Vulnesis malware record already referenced it.
 //
 // This breaks a self-reinforcing loop. The STIX feed is generated from our own
 // mints: the api.anthropic.com entry reads "Malicious domain observed in 1353
-// Vulnetix malware advisory record(s)" with external_references pointing at
+// Vulnesis malware advisory record(s)" with external_references pointing at
 // GCVE-110-CARGO-… advisories. So a package referencing that host got minted, the
 // host was harvested into the feed, and from then on EVERY package referencing it
 // was minted — each new mint raising the observation count, which reads as

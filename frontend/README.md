@@ -1,6 +1,6 @@
 # malscan-frontend
 
-A native ([egui]/[eframe]) configuration frontend for the Vulnetix
+A native ([egui]/[eframe]) configuration frontend for the Vulnesis
 `malscan-engine`. It exposes the engine's detection surface as a per-ecosystem
 settings panel:
 
@@ -90,7 +90,7 @@ cargo run
 > The crate disables eframe's default features and keeps only
 > `default_fonts`, `glow`, `wayland`, `x11` — this drops the Linux
 > `accesskit → zbus` accessibility stack (not needed here, and a flaky fetch on
-> the Vulnetix cargo mirror).
+> the Vulnesis cargo mirror).
 
 ## Test
 

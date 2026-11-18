@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/config"
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/config"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // End-to-end through the real runtime path: config.Resolve merges the embedded

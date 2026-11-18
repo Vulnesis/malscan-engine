@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // The STIX feed is generated from our own malware advisory records, so an
@@ -15,7 +15,7 @@ import (
 // corroboration. These tests pin the provenance-based demotion that breaks it.
 //
 // The real-world case: api.anthropic.com, published as "Malicious domain observed
-// in 1353 Vulnetix malware advisory record(s)" with source:registry provenance,
+// in 1353 Vulnesis malware advisory record(s)" with source:registry provenance,
 // had minted 177 crates.io packages as malware on a bare host match alone.
 
 func selfSourcedIndicator(t IndicatorType, value string) *Indicator {

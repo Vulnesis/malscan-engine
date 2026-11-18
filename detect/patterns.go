@@ -3,7 +3,7 @@ package detect
 import (
 	_ "embed"
 	"fmt"
-	"github.com/vulnetix/malscan-engine/allow"
+	"github.com/vulnesis/malscan-engine/allow"
 	"log/slog"
 	"regexp"
 	"sort"

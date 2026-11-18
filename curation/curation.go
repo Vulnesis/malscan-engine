@@ -1,5 +1,5 @@
 // Package curation is the shared source of truth for customer false-positive
-// feedback that both the Vulnetix CLI and the vdb-manager registry processors
+// feedback that both the Vulnesis CLI and the vdb-manager registry processors
 // consult before flagging a subject as malware. It mirrors the role of the
 // `allow` package (benign-indicator suppression) but is data-driven and supplied
 // at runtime rather than compiled in: the backend aggregates per-customer FP

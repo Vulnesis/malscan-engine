@@ -11,7 +11,7 @@ the **rules of engagement** an agent must respect before changing anything.
 
 `malscan-engine` is a **pure-Go** library that decides whether a software package
 is malicious by analysing its build/manifest scripts, install hooks, source, and
-declared artifacts. It is consumed in-process by other Vulnetix services — it is
+declared artifacts. It is consumed in-process by other Vulnesis services — it is
 **not** a standalone application (the user-facing CLI lives in the `cli` repo as
 `malscan`). A small **Rust (egui) frontend** is a *configuration editor* for the
 engine's per-ecosystem capability files; it is not part of the detection path.

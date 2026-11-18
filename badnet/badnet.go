@@ -22,7 +22,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/vulnetix/malscan-engine/allow"
+	"github.com/vulnesis/malscan-engine/allow"
 )
 
 //go:embed data

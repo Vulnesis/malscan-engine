@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/vulnetix/malscan-engine/allow"
+	"github.com/vulnesis/malscan-engine/allow"
 )
 
 // format identifies how a feed body is laid out so the right preprocessing runs

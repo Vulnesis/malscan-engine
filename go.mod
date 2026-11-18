@@ -1,4 +1,4 @@
-module github.com/vulnetix/malscan-engine
+module github.com/vulnesis/malscan-engine
 
 go 1.25.0
 

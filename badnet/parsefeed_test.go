@@ -8,11 +8,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/allow"
+	"github.com/vulnesis/malscan-engine/allow"
 )
 
 // This file holds the round-trip property tests over ParseFeed, the exported
-// re-parsing surface the Vulnetix site and the genblocklist generator share.
+// re-parsing surface the Vulnesis site and the genblocklist generator share.
 // The invariants come from the card; generators keep to values the validators
 // classify, so any divergence between the per-bucket filters is what fails.
 

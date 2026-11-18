@@ -3,7 +3,7 @@ package iocscan
 import (
 	"testing"
 
-	"github.com/vulnetix/malscan-engine/detect"
+	"github.com/vulnesis/malscan-engine/detect"
 )
 
 // A host named in a comment is not a host the package talks to.
