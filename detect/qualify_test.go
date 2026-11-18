@@ -48,13 +48,13 @@ func TestQualify_SubstringFallbackForGtfobinsFamily(t *testing.T) {
 
 func TestIntentOf(t *testing.T) {
 	cases := map[string]Intent{
-		"P-CURL-PIPE":             IntentMalicious,
-		"P-DISCORD-WEBHOOK":       IntentExfil,
-		"P-PROFILE-MOD":           IntentPersistence,
-		"P-EVAL-BASE64":           IntentObfuscation,
-		"P-NO-CHECKSUMS":          IntentReputation,
-		"IOC-STIX-MATCH":          IntentMalicious,
-		"G-DOWNLOAD-ARIA2C":       IntentDualUse,
+		"P-CURL-PIPE":       IntentMalicious,
+		"P-DISCORD-WEBHOOK": IntentExfil,
+		"P-PROFILE-MOD":     IntentPersistence,
+		"P-EVAL-BASE64":     IntentObfuscation,
+		"P-NO-CHECKSUMS":    IntentReputation,
+		"IOC-STIX-MATCH":    IntentMalicious,
+		"G-DOWNLOAD-ARIA2C": IntentDualUse,
 	}
 	for id, want := range cases {
 		if got := IntentOf(Finding{ID: id}); got != want {

@@ -2,7 +2,9 @@ package detect
 
 import "testing"
 
-func ev() Finding      { return EvidenceFinding("B-CURL-EXEC", "behavioral", "", "download-and-execute", "") }
+func ev() Finding {
+	return EvidenceFinding("B-CURL-EXEC", "behavioral", "", "download-and-execute", "")
+}
 func entropy() Finding { return Trigger(EntropyTriggerID, "pkgbuild", "high-entropy heredoc", "") }
 func trig(id string) Finding {
 	return Trigger(id, "metadata", "x", "owner")

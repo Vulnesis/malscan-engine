@@ -42,7 +42,7 @@ func makeBundle(inds ...tind) string {
 			"labels":       ind.labels,
 			"valid_from":   "2026-04-17T07:52:09Z",
 			"external_references": []map[string]any{
-				{"source_name": "vulnesis", "external_id": ind.extID},
+				{"source_name": "vulnetix", "external_id": ind.extID},
 			},
 		}
 		objs = append(objs, obj)
