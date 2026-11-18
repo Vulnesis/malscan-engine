@@ -83,7 +83,7 @@ type FeedLoader struct {
 	TweetFeedTimeout time.Duration
 	DisableTweetFeed bool
 
-	// DisableVulnesisIndex skips the vulnesis STIX index (DefaultIndexURL) and its
+	// DisableVulnetixIndex skips the vulnetix STIX index (DefaultIndexURL) and its
 	// per-ecosystem feeds, while still loading the embedded badnet set and
 	// TweetFeed.
 	//
@@ -94,7 +94,7 @@ type FeedLoader struct {
 	// next scan, and a single false positive is self-confirming. For any OTHER
 	// consumer the index genuinely is third-party, which is why it stays the
 	// default and this is opt-out rather than opt-in.
-	DisableVulnesisIndex bool
+	DisableVulnetixIndex bool
 
 	// now is a test seam for the clock; nil means time.Now. It governs both the
 	// timestamp encoded into a new cache filename and the freshness comparison.
@@ -183,7 +183,7 @@ func (l *FeedLoader) Load(ecosystems ...string) (*IndicatorSet, []Warning, error
 	return l.load(false, false, ecosystems...)
 }
 
-// Refresh force-fetches every feed (the vulnesis index + its per-ecosystem feeds
+// Refresh force-fetches every feed (the vulnetix index + its per-ecosystem feeds
 // + the TweetFeed base) from remote, bypassing cache TTLs and rewriting the
 // on-disk cache, so subsequent TTL-cached Load/Scan calls read the fresh data.
 // With no ecosystems it refreshes every feed listed in the index; otherwise just
@@ -203,7 +203,7 @@ func (l *FeedLoader) load(forceFresh, wantAll bool, ecosystems ...string) (*Indi
 	var warnings []Warning
 
 	var idx Index
-	if !l.DisableVulnesisIndex {
+	if !l.DisableVulnetixIndex {
 		idxData, w, err := l.acquire("index", l.indexURL(), "", l.ttl(), l.httpClient(), forceFresh)
 		if err != nil {
 			return nil, warnings, fmt.Errorf("load stix index: %w", err)

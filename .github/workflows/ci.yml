@@ -17,7 +17,7 @@ permissions:
 jobs:
   test:
     name: Build, Vet & Test
-    runs-on: [self-hosted, Linux, X64, vulnesis-local]
+    runs-on: [self-hosted, Linux, X64, vulnetix-local]
     # The pool's runners are ephemeral: one instance takes one job and
     # deregisters. A job that hangs therefore holds a whole instance until the
     # Actions default of six hours expires, and the pool is capped at 24. This

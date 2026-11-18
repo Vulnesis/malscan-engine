@@ -5,12 +5,12 @@ import "testing"
 func TestGitHubWebFlowAllowlisted(t *testing.T) {
 	s := New()
 	cases := []string{
-		"5DE3E0509C47EA3CF04A42D34AEE18F83AFDEB23",          // full fingerprint
+		"5DE3E0509C47EA3CF04A42D34AEE18F83AFDEB23",       // full fingerprint
 		"5DE3 E050 9C47 EA3C F04A 42D3 4AEE 18F8 3AFD EB23", // spaced fingerprint (gpg --fingerprint)
-		"4AEE18F83AFDEB23",   // long key id
-		"4aee18f83afdeb23",   // lowercase long key id
-		"3AFDEB23",           // short key id
-		"0x4AEE18F83AFDEB23", // 0x-prefixed
+		"4AEE18F83AFDEB23",                                // long key id
+		"4aee18f83afdeb23",                                // lowercase long key id
+		"3AFDEB23",                                        // short key id
+		"0x4AEE18F83AFDEB23",                              // 0x-prefixed
 	}
 	for _, c := range cases {
 		if !s.IsKnownGood(c) {

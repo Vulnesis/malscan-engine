@@ -24,9 +24,9 @@ func TestIPv4BoundaryRejectsNumberRuns(t *testing.T) {
 	m := testMatcher()
 	reject := []string{
 		"transform: translate(-" + knownBadIP + ", 4)", // signed coordinate
-		"version " + knownBadIP + ".8 released",        // 5-octet dotted run
-		"range " + knownBadIP + "-200 allowed",         // numeric range
-		"v" + knownBadIP,                               // leading digit/letter glue handled by \b too
+		"version " + knownBadIP + ".8 released",          // 5-octet dotted run
+		"range " + knownBadIP + "-200 allowed",           // numeric range
+		"v" + knownBadIP,                                 // leading digit/letter glue handled by \b too
 	}
 	for _, line := range reject {
 		if lm := m.matchLine(line, false); ipv4InMatches(lm) {
@@ -40,11 +40,11 @@ func TestIPv4BoundaryRejectsNumberRuns(t *testing.T) {
 func TestIPv4StillMatchesRealUsage(t *testing.T) {
 	m := testMatcher()
 	accept := []string{
-		"connect to " + knownBadIP + " now", // whitespace
-		`host = "` + knownBadIP + `"`,       // quoted
-		"http://" + knownBadIP + "/payload", // URL host
-		"tcp://" + knownBadIP + ":4444",     // scheme + port
-		"(" + knownBadIP + ")",              // parens
+		"connect to " + knownBadIP + " now",   // whitespace
+		`host = "` + knownBadIP + `"`,          // quoted
+		"http://" + knownBadIP + "/payload",    // URL host
+		"tcp://" + knownBadIP + ":4444",        // scheme + port
+		"(" + knownBadIP + ")",                 // parens
 	}
 	for _, line := range accept {
 		if lm := m.matchLine(line, false); !ipv4InMatches(lm) {

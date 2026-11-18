@@ -99,8 +99,8 @@ var known = []Entry{
 
 // Set is the queryable allowlist. The zero value is not usable; construct with New.
 type Set struct {
-	tokens map[string]Entry // normalised key tokens -> entry
-	emails map[string]Entry // lowercased emails -> entry
+	tokens  map[string]Entry // normalised key tokens -> entry
+	emails  map[string]Entry // lowercased emails -> entry
 }
 
 // New returns a Set seeded from the hardcoded known list.

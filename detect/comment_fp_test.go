@@ -14,11 +14,11 @@ func TestCommentLinesDoNotMintFindings(t *testing.T) {
 			" * You should set [telegram bot token](https://core.telegram.org/bots#botfather) and chatId in your config.\n" +
 			" */\n",
 		"P-CRON-CREATE phpdoc": "<?php\n/**\n * CronManager provides easy access to the crontable\n */\n",
-		"P-URL-SHORTENER link": "<?php\n/**\n * @link http://bit.ly/hg3gHb\n */\n",
-		"P-CRYPTO-WALLET hash": "#                \"contractAddress\": \"0x64bc2ca1be492be7185faa2c8835d9b824c8a194\"\n",
-		"P-AT-JOB prose":       "# 2026 March equinox is ~14:46 UTC Mar 20; at 12:08 UTC (solar noon)\n",
-		"slash-slash":          "// curl https://example.com/install.sh | sh\n",
-		"html comment":         "<!-- crontab -e adds the persistence entry -->\n",
+		"P-URL-SHORTENER link":  "<?php\n/**\n * @link http://bit.ly/hg3gHb\n */\n",
+		"P-CRYPTO-WALLET hash":  "#                \"contractAddress\": \"0x64bc2ca1be492be7185faa2c8835d9b824c8a194\"\n",
+		"P-AT-JOB prose":        "# 2026 March equinox is ~14:46 UTC Mar 20; at 12:08 UTC (solar noon)\n",
+		"slash-slash":           "// curl https://example.com/install.sh | sh\n",
+		"html comment":          "<!-- crontab -e adds the persistence entry -->\n",
 	}
 	for name, src := range cases {
 		t.Run(name, func(t *testing.T) {

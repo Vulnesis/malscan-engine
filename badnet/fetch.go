@@ -13,7 +13,7 @@ import (
 )
 
 // UserAgent identifies the fetcher to upstream feeds.
-const UserAgent = "vulnesis-malscan-badnet/1.0 (+https://vulnes.is)"
+const UserAgent = "vulnetix-malscan-badnet/1.0 (+https://vulnes.is)"
 
 // DefaultFetchTimeout is the per-feed HTTP timeout used when the caller passes a
 // nil client.
@@ -241,7 +241,7 @@ func renderFile(label string, sources, vals []string) string {
 	var b strings.Builder
 	fmt.Fprintf(&b, "# %s\n", label)
 	b.WriteString("# GENERATED from public threat-intel feeds (badnet). Do not edit by hand.\n")
-	b.WriteString("# Rebuild: `just gen-blocklists-force` (release) or `vulnesis malscan --fetch-definitions` (runtime).\n")
+	b.WriteString("# Rebuild: `just gen-blocklists-force` (release) or `vulnetix malscan --fetch-definitions` (runtime).\n")
 	fmt.Fprintf(&b, "# sources: %s\n", strings.Join(sources, ", "))
 	fmt.Fprintf(&b, "# count: %d\n", len(vals))
 	for _, v := range vals {

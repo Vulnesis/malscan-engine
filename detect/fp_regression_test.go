@@ -3,7 +3,7 @@ package detect
 import "testing"
 
 // These tests pin the false-positive fixes that were driven by a malscan of a
-// legitimate npm project (the website .vulnesis/malscan.sarif): the Arch-PKGBUILD
+// legitimate npm project (the website .vulnetix/malscan.sarif): the Arch-PKGBUILD
 // analyzers (checksum arrays, source-URL hygiene) and the dual-use inline
 // interpreters must not fire on a declarative manifest like package.json.
 
