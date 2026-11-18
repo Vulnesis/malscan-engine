@@ -4,7 +4,7 @@
 
 # malscan-engine
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Vulnetix/malscan-engine)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Vulnesis/malscan-engine)
 
 Shared Go module for Vulnesis malicious-package detection. Consumed by both the
 VDB processors (`vdb-manager`) and the `package-firewall`.
